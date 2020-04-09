@@ -1,7 +1,8 @@
 class ObjectivesController < ApplicationController
+    # before any action, our set_goal and set_objective methods will run
     before_action :set_goal
     before_action :set_objective, only: [:show]
-    
+
     def index
         @objectives = @goal.objectives.all 
         render json: @objectives 

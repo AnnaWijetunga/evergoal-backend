@@ -1,4 +1,5 @@
 class GoalsController < ApplicationController
+    # before any action, our set_goal method will run
     before_action :set_goal, only: [:show, :destroy, :toggle]
 
     def index
