@@ -21,7 +21,7 @@ class GoalsController < ApplicationController
     end
 
     def toggle
-        @goal.toggle!
+        @goal.toggle!(:completed)
         render json: @goal
     end
 
