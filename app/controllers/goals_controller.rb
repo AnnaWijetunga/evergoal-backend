@@ -13,7 +13,8 @@ class GoalsController < ApplicationController
 
     def create
         @goal = Goal.create(goal_params)
-        render json: @goal
+        # status needed here?
+        render json: @goal, status: :created
     end
 
     def destroy
