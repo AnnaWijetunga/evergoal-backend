@@ -11,6 +11,10 @@ Rails.application.routes.draw do
 
   patch '/api/objectives/:id', to: 'objectives#toggle'
 
+  get '*path', to: "application#fallback_index_html", constraints: ->(request) do
+    !request.xhr? && request.format.html?
+  end
+
 end
 
 # original routes and here below
