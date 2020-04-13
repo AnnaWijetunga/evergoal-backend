@@ -15,4 +15,4 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   end
 end
 
-# I will allow any origin and they can access any of the above methods.
+# That "*" above means, I will allow any origin and they can access any of the above methods.
