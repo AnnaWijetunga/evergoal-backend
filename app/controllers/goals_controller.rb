@@ -8,6 +8,7 @@ class GoalsController < ApplicationController
     end
 
     def show
+        # @goal = Goal.find(params[:id])
         render json: @goal
     end
 
@@ -17,10 +18,26 @@ class GoalsController < ApplicationController
         render json: @goal, status: :created
     end
 
+    # Alternative to the above action
+    # def create
+    #     @goal = Goal.new(goal_params)
+    #     if @goal.save
+    #       render json: @goal
+    #     else
+    #       render json: {error: 'Error creating goal'}
+    #     end
+    # end
+
     def destroy
         @goal.destroy 
         render json: @goal
     end
+
+    # alternative to the above
+    # def destroy
+    #     @goal = Goal.find(params[:id])
+    #     @goal.destroy
+    # end
 
     def toggle
         @goal.toggle!(:completed)
