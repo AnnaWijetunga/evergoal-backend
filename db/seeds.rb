@@ -6,9 +6,9 @@ Goal.delete_all
 Goal.create(aim:"Run", strategy: "Run 6 days a week to build up to a marathon.")
 Goal.create(aim:"Cook", strategy: "Menu plan and create weekly meals.")
 
-Objective.create(description: "Track my runs", goal_id: 1, completed: 0)
-Objective.create(description: "Increase mileage weekly", goal_id: 1, completed: 0)
-Objective.create(description: "Buy new shoes", goal_id: 1, completed: 0)
+Objective.create(description: "Track my runs", goal_id: 3, completed: 0)
+Objective.create(description: "Increase mileage weekly", goal_id: 3, completed: 0)
+Objective.create(description: "Buy new shoes", goal_id: 3, completed: 0)
 
-Objective.create(description: "Set aside a day for weekly planning", goal_id: 2, completed: 0)
-Objective.create(description: "Set aside time to write down ingredients", goal_id: 2, completed: 0)
+Objective.create(description: "Set aside a day for weekly planning", goal_id: 4, completed: 0)
+Objective.create(description: "Set aside time to write down ingredients", goal_id: 4, completed: 0)
