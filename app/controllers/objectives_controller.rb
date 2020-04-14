@@ -14,7 +14,7 @@ class ObjectivesController < ApplicationController
     end
 
     def create
-        @objective = @goal.objectives.ceate(objective_params)
+        @objective = @goal.objectives.create(objective_params)
         # status needed here?
         render json: @objective, status: :created 
     end
