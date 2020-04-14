@@ -15,30 +15,13 @@ class GoalsController < ApplicationController
 
     def create
         @goal = Goal.create(goal_params)
-        # status needed here?
-        render json: @goal, status: :created
+        render json: @goal
     end
-
-    # Alternative to the above action
-    # def create
-    #     @goal = Goal.new(goal_params)
-    #     if @goal.save
-    #       render json: @goal
-    #     else
-    #       render json: {error: 'Error creating goal'}
-    #     end
-    # end
 
     def destroy
         @goal.destroy 
         render json: @goal
     end
-
-    # alternative to the above
-    # def destroy
-    #     @goal = Goal.find(params[:id])
-    #     @goal.destroy
-    # end
 
     def toggle
         @goal.toggle!(:completed)

@@ -15,8 +15,7 @@ class ObjectivesController < ApplicationController
 
     def create
         @objective = @goal.objectives.create(objective_params)
-        # status needed here?
-        render json: @objective, status: :created 
+        render json: @objective
     end
 
     def toggle
