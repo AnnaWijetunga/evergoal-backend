@@ -11,15 +11,12 @@ Rails.application.routes.draw do
 
   # custom route for the toggle function
   get '/api/goals/:id/toggle', to: 'goals#toggle'
+  
+  # route to delete an objective
   resources :objectives, only: [:destroy]
 
   # custom route for the toggle function
   patch '/api/objectives/:id', to: 'objectives#toggle'
-
-  # fallback route - not certain it's needed but it seems like a good idea
-  get '*path', to: "application#fallback_index_html", constraints: ->(request) do
-    !request.xhr? && request.format.html?
-  end
 
 end
 
