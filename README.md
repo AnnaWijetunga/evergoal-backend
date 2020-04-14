@@ -1,7 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+You're reading the back end of Evergoal! Visit here for the front end: 
+
+https://github.com/AnnaWijetunga/evergoal-frontend
 
 Things you may want to cover:
 
