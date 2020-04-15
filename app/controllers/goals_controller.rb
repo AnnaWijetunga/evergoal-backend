@@ -13,16 +13,19 @@ class GoalsController < ApplicationController
         render json: @goal
     end
 
+    # create a new goal, abiding by the goal parameters below
     def create
         @goal = Goal.create(goal_params)
         render json: @goal
     end
 
+    # delete a goal permanently
     def destroy
         @goal.destroy 
         render json: @goal
     end
 
+    # toggle a goal completed
     def toggle
         @goal.toggle!(:completed)
         render json: @goal
@@ -30,12 +33,13 @@ class GoalsController < ApplicationController
 
     private
 
-    # our params require a goal and permit the attributes of aim and strategy
+    # params require a goal and permit the attributes of aim and strategy to be modified
     def goal_params
         params.require(:goal).permit(:aim, :strategy)
     end
 
-    # we want an index of all transactions associated with a specific account - this will run before any of our routes above
+    # we want an index of all transactions associated with a specific account
+    # this runs before any of our routes above - because of before_action
     def set_goal
         @goal = Goal.find(params[:id])
     end
