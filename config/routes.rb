@@ -9,13 +9,13 @@ Rails.application.routes.draw do
     end
   end
 
-  # custom route for the toggle function
+  # custom route for the goals toggle function
   get '/api/goals/:id/toggle', to: 'goals#toggle'
   
   # route to delete an objective
   resources :objectives, only: [:destroy]
 
-  # custom route for the toggle function
+  # custom route for the objectives toggle function
   patch '/api/objectives/:id', to: 'objectives#toggle'
 
 end
