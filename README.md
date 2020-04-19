@@ -14,6 +14,10 @@ Evergoal is perfect for professionals who want to organize their personal and pr
 
 You can add a new goal, and within that goal, add new objectives to help keep your goal actionable. Once an objective is complete, you can check the box - complete! You can delete the entire goal, or any of the objectives, at any time.
 
+# Video Walkthrough
+
+Click here for a 1-minute walkthrough of Evergoal: https://vimeo.com/407732985
+
 ## Installation
 
 Fork and clone repos
