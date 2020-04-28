@@ -53,3 +53,9 @@ test:
   username: annawijetunga
   password:
   timeout: 5000
+
+production:
+  adapter: postgresql
+  database: evergoal-backend_production
+  pool: 5
+  timeout: 5000
