@@ -18,6 +18,12 @@ Rails.application.routes.draw do
   # custom route for the objectives toggle function
   patch '/api/objectives/:id', to: 'objectives#toggle'
 
+  # fallback route - Heroku
+  get '*path', to: "application#fallback_index_html", constraints: ->(request) do
+    !request.xhr? && request.format.html?
+  end
+
+
 end
 
 # SCOPE

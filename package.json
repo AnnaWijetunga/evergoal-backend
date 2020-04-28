@@ -1,0 +1,20 @@
+{
+  "name": "evergoal-backend",
+  "version": "1.0.0",
+  "description": "backend",
+  "main": "index.js",
+  "repository": "git@github.com:AnnaWijetunga/evergoal-backend.git",
+  "author": "<AnnaWijetunga> <<annawijetunga@gmail.com>>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "cd client && yarn install && yarn build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "postinstall": "yarn build && yarn deploy && echo 'Client built!'"
+  },
+  "engines": {
+    "yarn": "1.22.0",
+    "npm": "6.14.3",
+    "node": "13.7.0"
+  }
+}
